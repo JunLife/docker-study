@@ -3,10 +3,10 @@
 ## Dockerfile
 
 - Dockerfile을 이용해서 Docker를 자동으로 빌드할 수 있다.
-- `docker build` 명령어를 사용해서 Dockerfile에 명시된 command line을 수행하도록 할 수 있다.
+- `docker image build` 명령어를 사용해서 Dockerfile에 명시된 command line을 수행하도록 할 수 있다.
 
 ```bash
-docker build [Dockerfile 경로]
+docker image build [Dockerfile 경로]
 ```
 
 ## .dockerignore
@@ -173,7 +173,7 @@ COPY [--chown=<user>:<group>] <src>... <dest>
 COPY [--chown=<user>:<group>] ["<src>",... "<dest>"]
 ```
 
-- 이미지에 호스트의 파일이나 디렉토리를 복사하낟.
+- 이미지에 호스트의 파일이나 디렉토리를 복사한다.
 - `ADD`는 대상이 압축파일인 경우 해체하여 복사하는 등 기능을 제공하지만, COPY는 복사만 수행한다.
 
 ## VOLUME
@@ -259,11 +259,12 @@ HEALTHCHECK NONE #기본 이미지에서 상속된 healthcheck 사용 안함
 - 컨테이너가 잘 동작하는지 확인한다.
 - 옵션은 다음과 같다.
 
-| Option       | Default | Description        |
-| ------------ | ------- | ------------------ |
-| --interval=n | 30s     | 헬스 체크 간격     |
-| --timeout=n  | 30s     | 헬스 체크 타임아웃 |
-| --retries=n  | 3       | 타임아웃 횟수      |
+| Option           | Default | Description                |
+| ---------------- | ------- | -------------------------- |
+| --interval=n     | 30s     | 헬스 체크 간격             |
+| --timeout=n      | 30s     | 헬스 체크 타임아웃 기준    |
+| --retries=n      | 3       | 타임아웃 횟수              |
+| --start_period=n | 0s      | 컨테이너 실행 후 대기 시간 |
 
 ## SHELL
 
