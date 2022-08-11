@@ -28,7 +28,7 @@
 
 1. [Docker 명령어](./docker-study/Docker%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 2. [Dockerfile refer](./docker-study/Dockerfile%20refer.md)
-3. [Compose file refer](./docker-study/Compose%20file%20refer.md)
+3. [Compose specification](./docker-study/Compose%20specification.md)
 
 </div>
 </details>
